@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ипотечный калькулятор | Ваш Риэлтор - Якутск</title>
+    <meta name="description" content="Рассчитайте ежемесячный платеж по ипотеке для покупки недвижимости в Якутске. Удобный калькулятор с учетом северных надбавок.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Ваш Риэлтор" onerror="this.src='https://via.placeholder.com/150x50/FFC107/2C3E50?text=Ваш+Риэлтор';">
+                <div class="logo-text">
+                    <div class="logo-main">Ваш Риэлтор</div>
+                    <div class="logo-sub">Агентство недвижимости в Якутске</div>
+                </div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="calculator.html" class="active">Ипотека</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li>
+                    <a href="tel:+79142873779" class="nav-phone">
+                        <i class="fas fa-phone"></i>
+                        +7‒914‒298‒61‒62
+                    </a>
+                </li>
+                <!-- 🌙 КНОПКА ТЕМНОЙ ТЕМЫ -->
+                <li>
+                    <button id="themeToggle" class="theme-toggle-btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Calculator Section -->
+    <section style="padding-top: 140px;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ипотечный калькулятор</h2>
+                <p class="section-subtitle">Рассчитайте ежемесячный платеж по ипотеке для недвижимости в Якутске</p>
+            </div>
+            
+            <div class="mortgage-calculator">
+                <h3 class="mb-4">Расчет ипотеки для Якутска</h3>
+                
+                <div class="calculator-row">
+                    <div class="form-group">
+                        <label class="form-label" for="property-price">Стоимость недвижимости (руб.)</label>
+                        <input type="number" id="property-price" class="form-control" value="5000000" min="100000" max="100000000" step="100000">
+                        <input type="range" id="property-price-range" class="range-slider" min="100000" max="20000000" value="5000000" step="100000">
+                        <div class="range-value">
+                            <span>100 тыс.</span>
+                            <span id="price-display">5 млн</span>
+                            <span>20 млн</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="initial-payment">Первоначальный взнос (руб.)</label>
+                        <input type="number" id="initial-payment" class="form-control" value="1000000" min="0" max="10000000" step="100000">
+                        <input type="range" id="initial-payment-range" class="range-slider" min="0" max="10000000" value="1000000" step="100000">
+                        <div class="range-value">
+                            <span>0</span>
+                            <span id="initial-display">1 млн</span>
+                            <span>10 млн</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calculator-row">
+                    <div class="form-group">
+                        <label class="form-label" for="loan-term">Срок кредита (лет)</label>
+                        <select id="loan-term" class="form-control">
+                            <option value="5">5 лет</option>
+                            <option value="10">10 лет</option>
+                            <option value="15" selected>15 лет</option>
+                            <option value="20">20 лет</option>
+                            <option value="25">25 лет</option>
+                            <option value="30">30 лет</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="interest-rate">Процентная ставка (%)</label>
+                        <input type="number" id="interest-rate" class="form-control" value="7.5" min="1" max="20" step="0.1">
+                        <input type="range" id="interest-rate-range" class="range-slider" min="1" max="20" value="7.5" step="0.1">
+                        <div class="range-value">
+                            <span>1%</span>
+                            <span id="rate-display">7.5%</span>
+                            <span>20%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary" id="calculate-btn" style="width: 100%;">
+                    <i class="fas fa-calculator"></i>
+                    Рассчитать ипотеку
+                </button>
+                
+                <div class="calculator-result" id="mortgage-result">
+                    <h4 class="mb-4">Результаты расчета</h4>
+                    
+                    <div class="result-item">
+                        <span class="result-label">Сумма кредита:</span>
+                        <span class="result-value" id="loan-amount">4 000 000 ₽</span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="result-label">Ежемесячный платеж:</span>
+                        <span class="result-value highlight" id="monthly-payment">37 045 ₽</span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="result-label">Общая сумма выплат:</span>
+                        <span class="result-value" id="total-payment">6 668 100 ₽</span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="result-label">Переплата по кредиту:</span>
+                        <span class="result-value" id="overpayment">2 668 100 ₽</span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="result-label">Эффективная ставка:</span>
+                        <span class="result-value" id="effective-rate">8.2%</span>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <p style="color: var(--text-light); font-size: 0.9rem;">
+                            <i class="fas fa-info-circle"></i>
+                            Расчет является предварительным. Для получения точных условий обратитесь к нашим ипотечным специалистам.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Банки-партнеры -->
+            <div class="section-header" style="margin-top: 60px;">
+                <h2 class="section-title">Банки-партнеры</h2>
+                <p class="section-subtitle">Специальные условия для жителей Якутска</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
+                <div style="padding: 20px; background: var(--bg-light); border-radius: 12px; box-shadow: var(--shadow);">
+                    <i class="fas fa-university" style="font-size: 3rem; color: var(--accent-yellow);"></i>
+                    <h4 style="margin-top: 15px;">Сбербанк</h4>
+                    <p>от 2%</p>
+                </div>
+                <div style="padding: 20px; background: var(--bg-light); border-radius: 12px; box-shadow: var(--shadow);">
+                    <i class="fas fa-university" style="font-size: 3rem; color: var(--accent-yellow);"></i>
+                    <h4 style="margin-top: 15px;">ВТБ</h4>
+                    <p>от 2%</p>
+                </div>
+                <div style="padding: 20px; background: var(--bg-light); border-radius: 12px; box-shadow: var(--shadow);">
+                    <i class="fas fa-university" style="font-size: 3rem; color: var(--accent-yellow);"></i>
+                    <h4 style="margin-top: 15px;">Альфа-Банк</h4>
+                    <p>от 2%</p>
+                </div>
+                <div style="padding: 20px; background: var(--bg-light); border-radius: 12px; box-shadow: var(--shadow);">
+                    <i class="fas fa-university" style="font-size: 3rem; color: var(--accent-yellow);"></i>
+                    <h4 style="margin-top: 15px;">Дом.РФ</h4>
+                    <p>от 2%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">Ваш Риэлтор</div>
+                    <p>Агентство недвижимости в Якутске с 2015 года.</p>
+                    <a href="contacts.html" class="btn btn-secondary">Бесплатная консультация</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Категории</h4>
+                    <ul>
+                        <li><a href="catalog.html?filter=new">Новостройки</a></li>
+                        <li><a href="catalog.html?filter=secondary">Вторичное жилье</a></li>
+                        <li><a href="catalog.html?filter=house">Частные дома</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Компания</h4>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="calculator.html">Ипотека</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i><div>+7‒914‒298‒61‒62</div></li>
+                        <li><i class="fas fa-envelope"></i><div>vachrieltor@gmail.com</div></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2015-2025 Агентство недвижимости "Ваш Риэлтор".</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Скрипт для темной темы -->
+    <script>
+    (function() {
+        // Проверяем сохраненную тему
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            const btn = document.getElementById('themeToggle');
+            if (btn) {
+                const icon = btn.querySelector('i');
+                if (icon) icon.className = 'fas fa-sun';
+            }
+        }
+        
+        function toggleTheme() {
+            const isDark = document.body.classList.toggle('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            const btn = document.getElementById('themeToggle');
+            if (btn) {
+                const icon = btn.querySelector('i');
+                if (icon) icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+            }
+        }
+        
+        // Навешиваем обработчик на кнопку
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

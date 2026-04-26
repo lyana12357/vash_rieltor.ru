@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании | Ваш Риэлтор - Агентство недвижимости в Якутске</title>
+    <meta name="description" content="10 лет опыта на рынке недвижимости Якутска. Более 2000 успешных сделок. Профессиональная команда риэлторов. Полное юридическое сопровождение.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Ваш Риэлтор" onerror="this.src='https://via.placeholder.com/150x50/FFC107/2C3E50?text=Ваш+Риэлтор';">
+                <div class="logo-text">
+                    <div class="logo-main">Ваш Риэлтор</div>
+                    <div class="logo-sub">Агентство недвижимости в Якутске</div>
+                </div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="calculator.html">Ипотека</a></li>
+                <li><a href="about.html" class="active">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li>
+                    <a href="tel:+79142986162" class="nav-phone">
+                        <i class="fas fa-phone"></i>
+                        +7‒914‒298‒61‒62
+                    </a>
+                </li>
+                <!-- 🌙 КНОПКА ТЕМНОЙ ТЕМЫ -->
+                <li>
+                    <button id="themeToggle" class="theme-toggle-btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section style="padding-top: 140px;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">О компании</h2>
+                <p class="section-subtitle">Агентство недвижимости "Ваш Риэлтор" - надежный партнер в Якутске</p>
+            </div>
+            
+            <div class="about-content">
+                <div>
+                    <h3 class="mb-4">10 лет на рынке недвижимости Якутска</h3>
+                    <p>Мы начали свою деятельность в 2015 году и за это время помогли тысячам семей найти свой дом в Якутске. Наша команда - это профессионалы с глубоким знанием местного рынка и законодательства.</p>
+                    <p>Специализируемся на работе в условиях Крайнего Севера, учитываем все особенности якутской недвижимости: от правильного утепления до юридических нюансов сделок в Республике Саха.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">лет опыта</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2000+</div>
+                            <div class="stat-label">успешных сделок</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">довольных клиентов</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">поддержка</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="img/ofis.jpg" alt="Наш офис в Якутске">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наша команда</h2>
+                <p class="section-subtitle">6 профессионалов, которым можно доверять</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+                <!-- Риэлтор 1 - Анна Иванова -->
+                <div style="text-align: center; background: var(--bg-light); border-radius: 20px; padding: 30px; box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div style="width: 150px; height: 150px; background: linear-gradient(135deg, var(--accent-yellow-light), #FFE4A0); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <i class="fas fa-user-tie" style="font-size: 5rem; color: var(--accent-yellow);"></i>
+                    </div>
+                    <h3 style="margin-bottom: 5px;">Анна Иванова</h3>
+                    <p style="color: var(--accent-yellow); font-weight: 600; margin-bottom: 15px;">🏆 Руководитель агентства</p>
+                    <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 15px; flex-wrap: wrap;">
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">📅 Стаж: 12 лет</span>
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">📊 500+ сделок</span>
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">⭐ Топ-риэлтор</span>
+                    </div>
+                    <p style="color: var(--text-gray); font-size: 0.95rem;">Эксперт по новостройкам и инвестиционной недвижимости. Поможет выбрать лучший вариант для жизни или бизнеса.</p>
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                        <a href="tel:+79142873779" style="color: var(--accent-yellow); text-decoration: none; font-weight: 600;">
+                            <i class="fas fa-phone"></i> +7‒914‒360‒76‒52 доб. 101
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Риэлтор 2 - Дмитрий Петров -->
+                <div style="text-align: center; background: var(--bg-light); border-radius: 20px; padding: 30px; box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div style="width: 150px; height: 150px; background: linear-gradient(135deg, var(--accent-yellow-light), #FFE4A0); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <i class="fas fa-user-astronaut" style="font-size: 5rem; color: var(--accent-yellow);"></i>
+                    </div>
+                    <h3 style="margin-bottom: 5px;">Дмитрий Петров</h3>
+                    <p style="color: var(--accent-yellow); font-weight: 600; margin-bottom: 15px;">🏠 Ведущий риэлтор</p>
+                    <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 15px; flex-wrap: wrap;">
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">📅 Стаж: 8 лет</span>
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">📊 350+ сделок</span>
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">🏅 VIP-клиенты</span>
+                    </div>
+                    <p style="color: var(--text-gray); font-size: 0.95rem;">Специалист по вторичному рынку и частным домам. Знает все районы Якутска и поможет найти лучший вариант.</p>
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                        <a href="tel:+79142873779" style="color: var(--accent-yellow); text-decoration: none; font-weight: 600;">
+                            <i class="fas fa-phone"></i> +7‒914‒297‒61‒72 доб. 102
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Риэлтор 3 - Светлана Морозова -->
+                <div style="text-align: center; background: var(--bg-light); border-radius: 20px; padding: 30px; box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div style="width: 150px; height: 150px; background: linear-gradient(135deg, var(--accent-yellow-light), #FFE4A0); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <i class="fas fa-chart-line" style="font-size: 5rem; color: var(--accent-yellow);"></i>
+                    </div>
+                    <h3 style="margin-bottom: 5px;">Светлана Морозова</h3>
+                    <p style="color: var(--accent-yellow); font-weight: 600; margin-bottom: 15px;">🏦 Ипотечный брокер</p>
+                    <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 15px; flex-wrap: wrap;">
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">📅 Стаж: 6 лет</span>
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">🏦 7 банков-партнеров</span>
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">📉 Лучшие ставки</span>
+                    </div>
+                    <p style="color: var(--text-gray); font-size: 0.95rem;">Эксперт по ипотечному кредитованию. Подберет лучшую программу с минимальной ставкой. Поможет получить одобрение.</p>
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                        <a href="tel:+79142873779" style="color: var(--accent-yellow); text-decoration: none; font-weight: 600;">
+                            <i class="fas fa-phone"></i> +7‒999‒287‒37‒79 доб. 103
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Риэлтор 4 - Михаил Попов -->
+                <div style="text-align: center; background: var(--bg-light); border-radius: 20px; padding: 30px; box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div style="width: 150px; height: 150px; background: linear-gradient(135deg, var(--accent-yellow-light), #FFE4A0); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <i class="fas fa-gavel" style="font-size: 5rem; color: var(--accent-yellow);"></i>
+                    </div>
+                    <h3 style="margin-bottom: 5px;">Михаил Попов</h3>
+                    <p style="color: var(--accent-yellow); font-weight: 600; margin-bottom: 15px;">⚖️ Юрист по недвижимости</p>
+                    <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 15px; flex-wrap: wrap;">
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">📅 Стаж: 10 лет</span>
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">⚖️ 100% чистота</span>
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">📜 Регистрация</span>
+                    </div>
+                    <p style="color: var(--text-gray); font-size: 0.95rem;">Полная юридическая проверка объектов, сопровождение сделок, регистрация в Росреестре. Знание законодательства РС (Я).</p>
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                        <a href="tel:+79142873779" style="color: var(--accent-yellow); text-decoration: none; font-weight: 600;">
+                            <i class="fas fa-phone"></i> +7‒96‒287‒17‒79 доб. 104
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Риэлтор 5 - Екатерина Алексеева -->
+                <div style="text-align: center; background: var(--bg-light); border-radius: 20px; padding: 30px; box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div style="width: 150px; height: 150px; background: linear-gradient(135deg, var(--accent-yellow-light), #FFE4A0); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <i class="fas fa-building" style="font-size: 5rem; color: var(--accent-yellow);"></i>
+                    </div>
+                    <h3 style="margin-bottom: 5px;">Екатерина Алексеева</h3>
+                    <p style="color: var(--accent-yellow); font-weight: 600; margin-bottom: 15px;">🏢 Специалист по коммерции</p>
+                    <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 15px; flex-wrap: wrap;">
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">📅 Стаж: 7 лет</span>
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">📊 280+ сделок</span>
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">🏪 Коммерция</span>
+                    </div>
+                    <p style="color: var(--text-gray); font-size: 0.95rem;">Эксперт по коммерческой недвижимости: офисы, склады, магазины, ТЦ. Поможет открыть или расширить бизнес в Якутске.</p>
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                        <a href="tel:+79142873779" style="color: var(--accent-yellow); text-decoration: none; font-weight: 600;">
+                            <i class="fas fa-phone"></i> +7‒924‒287‒37‒17 доб. 105
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Риэлтор 6 - Алексей Григорьев -->
+                <div style="text-align: center; background: var(--bg-light); border-radius: 20px; padding: 30px; box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div style="width: 150px; height: 150px; background: linear-gradient(135deg, var(--accent-yellow-light), #FFE4A0); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <i class="fas fa-home" style="font-size: 5rem; color: var(--accent-yellow);"></i>
+                    </div>
+                    <h3 style="margin-bottom: 5px;">Алексей Григорьев</h3>
+                    <p style="color: var(--accent-yellow); font-weight: 600; margin-bottom: 15px;">🌲 Специалист по загородной недвижимости</p>
+                    <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 15px; flex-wrap: wrap;">
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">📅 Стаж: 5 лет</span>
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">📊 220+ сделок</span>
+                        <span style="background: var(--bg-secondary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;">🏡 Дома и участки</span>
+                    </div>
+                    <p style="color: var(--text-gray); font-size: 0.95rem;">Эксперт по загородной недвижимости: коттеджи, дачи, земельные участки. Знает все пригороды Якутска и лучшие места для жизни.</p>
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                        <a href="tel:+79142873779" style="color: var(--accent-yellow); text-decoration: none; font-weight: 600;">
+                            <i class="fas fa-phone"></i> +7‒914‒256‒91‒00 доб. 106
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">Ваш Риэлтор</div>
+                    <p>Агентство недвижимости в Якутске с 2015 года.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Категории</h4>
+                    <ul>
+                        <li><a href="catalog.html?filter=new">Новостройки</a></li>
+                        <li><a href="catalog.html?filter=secondary">Вторичное жилье</a></li>
+                        <li><a href="catalog.html?filter=house">Частные дома</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Компания</h4>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="calculator.html">Ипотека</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i><div>+7‒914‒298‒61‒62</div></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2015-2026 Агентство недвижимости "Ваш Риэлтор".</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Скрипт для темной темы -->
+    <script>
+    (function() {
+        // Проверяем сохраненную тему
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            const btn = document.getElementById('themeToggle');
+            if (btn) {
+                const icon = btn.querySelector('i');
+                if (icon) icon.className = 'fas fa-sun';
+            }
+        }
+        
+        function toggleTheme() {
+            const isDark = document.body.classList.toggle('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            const btn = document.getElementById('themeToggle');
+            if (btn) {
+                const icon = btn.querySelector('i');
+                if (icon) icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+            }
+        }
+        
+        // Навешиваем обработчик на кнопку
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+        });
+    })();
+    </script>
+</body>
+</html>
