@@ -1,0 +1,321 @@
+/* dark-theme.css - Темная тема для сайта недвижимости */
+
+/* Кнопка переключения темы */
+.theme-toggle-btn {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+.theme-toggle-btn:hover {
+    background: var(--accent-yellow);
+    transform: rotate(15deg);
+}
+
+/* Плавающая кнопка */
+.floating-theme-toggle {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    background: var(--accent-yellow);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.floating-theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(255, 193, 7, 0.4);
+}
+
+.floating-theme-toggle i {
+    font-size: 1.6rem;
+    color: var(--text-dark);
+}
+
+/* Кнопка в мобильном меню */
+.mobile-theme-toggle {
+    background: none;
+    border: none;
+    width: 100%;
+    padding: 12px 0;
+    text-align: left;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mobile-theme-toggle i {
+    font-size: 1.2rem;
+    width: 24px;
+}
+
+/* ========== ТЕМНАЯ ТЕМА ========== */
+body.dark-theme {
+    --bg-light: #1a1a2e;
+    --bg-secondary: #16213e;
+    --bg-tertiary: #0f3460;
+    --text-dark: #eeeeee;
+    --text-gray: #cccccc;
+    --text-light: #aaaaaa;
+    --border-color: #2a3a5a;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.4);
+    --accent-yellow-light: #2a2a4a;
+}
+
+/* Фон страницы */
+body.dark-theme {
+    background-color: var(--bg-light);
+}
+
+/* Карточки недвижимости */
+body.dark-theme .property-card,
+body.dark-theme .category-card,
+body.dark-theme .contact-form,
+body.dark-theme .mortgage-calculator {
+    background-color: #0f3460;
+    border: 1px solid #2a3a5a;
+}
+
+/* Кнопки фильтров */
+body.dark-theme .filter-btn {
+    background-color: #16213e;
+    color: #cccccc;
+    border-color: #2a3a5a;
+}
+
+body.dark-theme .filter-btn:hover {
+    background-color: #1a2a4a;
+}
+
+body.dark-theme .filter-btn.active {
+    background-color: var(--accent-yellow);
+    color: #1a1a2e;
+    border-color: var(--accent-yellow);
+}
+
+/* Формы и поля ввода */
+body.dark-theme .form-control {
+    background-color: #16213e;
+    border-color: #2a3a5a;
+    color: #eeeeee;
+}
+
+body.dark-theme .form-control:focus {
+    background-color: #1a2a4a;
+    border-color: var(--accent-yellow);
+    outline: none;
+}
+
+body.dark-theme .form-control::placeholder {
+    color: #888888;
+}
+
+/* Статистика и преимущества */
+body.dark-theme .stat-item,
+body.dark-theme .feature-icon-wrapper {
+    background-color: #16213e;
+}
+
+body.dark-theme .stat-item {
+    border: 1px solid #2a3a5a;
+}
+
+/* Контактные иконки */
+body.dark-theme .contact-icon {
+    background-color: #2a3a5a;
+}
+
+/* Шапка сайта */
+body.dark-theme header {
+    background-color: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom-color: #2a3a5a;
+}
+
+body.dark-theme .header-container {
+    border-bottom-color: #2a3a5a;
+}
+
+/* Навигация */
+body.dark-theme .nav-links a {
+    color: #eeeeee;
+}
+
+body.dark-theme .nav-links a:hover {
+    color: var(--accent-yellow);
+}
+
+/* Мобильное меню */
+body.dark-theme .nav-links.active {
+    background-color: #16213e;
+    border-top-color: #2a3a5a;
+}
+
+/* Футер */
+body.dark-theme footer {
+    background-color: #0a0a1a;
+}
+
+body.dark-theme .footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark-theme .footer-links a:hover {
+    color: var(--accent-yellow);
+}
+
+/* Калькулятор */
+body.dark-theme .calculator-result {
+    background-color: #16213e;
+    border-color: #2a3a5a;
+}
+
+body.dark-theme .result-item {
+    border-bottom-color: #2a3a5a;
+}
+
+body.dark-theme .range-slider {
+    background-color: #2a3a5a;
+}
+
+body.dark-theme .range-slider::-webkit-slider-thumb {
+    background-color: var(--accent-yellow);
+}
+
+/* Модальные окна */
+body.dark-theme .modal-content {
+    background-color: #0f3460;
+}
+
+body.dark-theme .modal-header {
+    background-color: #0a0a2a;
+}
+
+body.dark-theme .modal-close {
+    color: #eeeeee;
+}
+
+body.dark-theme .modal-close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Бейджи и статусы */
+body.dark-theme .property-badge {
+    background-color: var(--accent-yellow);
+    color: #1a1a2e;
+}
+
+body.dark-theme .property-status {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #4ade80;
+}
+
+/* Категории */
+body.dark-theme .category-icon {
+    background-color: #2a3a5a;
+}
+
+body.dark-theme .category-card p {
+    color: #cccccc;
+}
+
+/* Особенности объектов */
+body.dark-theme .feature-item p {
+    color: #cccccc;
+}
+
+/* Карта */
+body.dark-theme #yandex-map {
+    border: 1px solid #2a3a5a;
+}
+
+/* Секции */
+body.dark-theme .properties-section,
+body.dark-theme .features-section,
+body.dark-theme .contact-section {
+    background-color: #16213e;
+}
+
+body.dark-theme .categories-section {
+    background-color: #1a1a2e;
+}
+
+/* Текст в герое (не меняем - остается белым) */
+body.dark-theme .hero p,
+body.dark-theme .hero h1,
+body.dark-theme .hero-badge,
+body.dark-theme .yakutsk-badge,
+body.dark-theme .stat-text,
+body.dark-theme .stat-number {
+    color: white;
+}
+
+/* Плавные переходы для всех элементов */
+* {
+    transition: background-color 0.3s ease, 
+                color 0.3s ease, 
+                border-color 0.3s ease, 
+                box-shadow 0.3s ease;
+}
+
+/* Стили для скролла в темной теме */
+body.dark-theme::-webkit-scrollbar {
+    width: 10px;
+}
+
+body.dark-theme::-webkit-scrollbar-track {
+    background: #16213e;
+}
+
+body.dark-theme::-webkit-scrollbar-thumb {
+    background: #2a3a5a;
+    border-radius: 5px;
+}
+
+body.dark-theme::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-yellow);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .floating-theme-toggle {
+        bottom: 80px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .floating-theme-toggle i {
+        font-size: 1.3rem;
+    }
+    
+    .theme-toggle-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}

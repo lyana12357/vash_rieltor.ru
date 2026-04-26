@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная | Ваш Риэлтор - Агентство недвижимости в Якутске</title>
+    <meta name="description" content="Агентство недвижимости в Якутске. Продажа и покупка квартир, домов, коммерческой недвижимости. Профессиональное сопровождение сделок с 2015 года.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Ваш Риэлтор" onerror="this.src='https://via.placeholder.com/150x50/FFC107/2C3E50?text=Ваш+Риэлтор';">
+                <div class="logo-text">
+                    <div class="logo-main">Ваш Риэлтор</div>
+                    <div class="logo-sub">Агентство недвижимости в Якутске</div>
+                </div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="calculator.html">Ипотека</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li>
+                    <a href="tel:+79142873779" class="nav-phone">
+                        <i class="fas fa-phone"></i>
+                        +7‒914‒298‒61‒62
+                    </a>
+                </li>
+                <!-- 🌙 КНОПКА ТЕМНОЙ ТЕМЫ -->
+                <li>
+                    <button id="themeToggle" class="theme-toggle-btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-award"></i>
+                    Лидер рынка недвижимости Якутска с 2015 года
+                </div>
+                
+                <h1>Найдем ваш идеальный дом в самом сердце Якутии</h1>
+                
+                <p>Профессиональное сопровождение сделок с недвижимостью. Более 2000 успешных сделок за 10 лет работы в суровых условиях Крайнего Севера.</p>
+                
+                <div class="yakutsk-badge">
+                    <i class="fas fa-map-marker-alt"></i>
+                    ул. Лермонтова, 38, офис 8 (2 этаж), Якутск
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="catalog.html" class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                        Смотреть каталог
+                    </a>
+                    <a href="calculator.html" class="btn btn-secondary">
+                        <i class="fas fa-calculator"></i>
+                        Рассчитать ипотеку
+                    </a>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">2000+</span>
+                        <span class="stat-text">Успешных сделок</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-text">Лет опыта</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-text">Довольных клиентов</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-text">Поддержка</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Категории недвижимости</h2>
+                <p class="section-subtitle">Выберите тип недвижимости для покупки в Якутске</p>
+            </div>
+            
+            <div class="categories-grid" id="categoriesContainer">
+                <!-- Categories loaded by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Почему выбирают нас</h2>
+                <p class="section-subtitle">Преимущества работы с агентством "Ваш Риэлтор"</p>
+            </div>
+            
+            <div class="features-grid" id="featuresContainer">
+                <!-- Features loaded by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">Ваш Риэлтор</div>
+                    <p>Агентство недвижимости в Якутске с 2015 года. Профессиональное сопровождение сделок с недвижимостью любой сложности.</p>
+                    <a href="contacts.html" class="btn btn-secondary">Бесплатная консультация</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Категории</h4>
+                    <ul>
+                        <li><a href="catalog.html?filter=new">Новостройки Якутска</a></li>
+                        <li><a href="catalog.html?filter=secondary">Вторичное жилье</a></li>
+                        <li><a href="catalog.html?filter=house">Частные дома</a></li>
+                        <li><a href="catalog.html?filter=commercial">Коммерческая недвижимость</a></li>
+                        <li><a href="catalog.html?filter=land">Земельные участки</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Компания</h4>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="calculator.html">Ипотечный калькулятор</a></li>
+                        <li><a href="about.html#services">Услуги</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i><div>ул. Лермонтова, 38<br>Якутск, офис 8</div></li>
+                        <li><i class="fas fa-phone"></i><div>+7‒914‒298‒61‒62<br>+7 (4112) 25-55-55</div></li>
+                        <li><i class="fas fa-envelope"></i><div>vachrieltor@gmail.com</div></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2015-2026 Агентство недвижимости "Ваш Риэлтор". Все права защищены.</p>
+                <p>Якутск, Республика Саха (Якутия)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Загрузка данных для главной страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof displayCategories === 'function') displayCategories();
+            if (typeof displayFeatures === 'function') displayFeatures();
+        });
+    </script>
+    
+    <!-- Скрипт для темной темы -->
+    <script>
+    (function() {
+        // Проверяем сохраненную тему
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            updateIcons(true);
+        }
+        
+        function updateIcons(isDark) {
+            const themeBtn = document.getElementById('themeToggle');
+            if (themeBtn) {
+                const icon = themeBtn.querySelector('i');
+                if (icon) {
+                    icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+                }
+            }
+        }
+        
+        function toggleTheme() {
+            const isDark = document.body.classList.toggle('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcons(isDark);
+        }
+        
+        // Навешиваем обработчик на кнопку
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

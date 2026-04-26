@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог недвижимости | Ваш Риэлтор - Якутск</title>
+    <meta name="description" content="Большой выбор квартир, домов и коммерческой недвижимости в Якутске. Фото, цены, характеристики. Удобный поиск по фильтрам.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Ваш Риэлтор" onerror="this.src='https://via.placeholder.com/150x50/FFC107/2C3E50?text=Ваш+Риэлтор';">
+                <div class="logo-text">
+                    <div class="logo-main">Ваш Риэлтор</div>
+                    <div class="logo-sub">Агентство недвижимости в Якутске</div>
+                </div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html" class="active">Каталог</a></li>
+                <li><a href="calculator.html">Ипотека</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li>
+                    <a href="tel:+79142873779" class="nav-phone">
+                        <i class="fas fa-phone"></i>
+                        +7‒914‒298‒61‒62
+                    </a>
+                </li>
+                <li>
+                    <button id="themeToggle" class="theme-toggle-btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Catalog Section -->
+    <section class="properties-section" style="padding-top: 140px;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Каталог недвижимости</h2>
+                <p class="section-subtitle">Выберите свой идеальный вариант из более чем 500 объектов в Якутске</p>
+            </div>
+            
+            <div class="properties-header">
+                <h3>Актуальные предложения 2026</h3>
+                <div class="properties-filter">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="new">Новостройки</button>
+                    <button class="filter-btn" data-filter="secondary">Вторичка</button>
+                    <button class="filter-btn" data-filter="house">Дома</button>
+                    <button class="filter-btn" data-filter="commercial">Коммерческая</button>
+                    <button class="filter-btn" data-filter="land">Участки</button>
+                </div>
+            </div>
+            
+            <div class="properties-grid" id="propertiesContainer">
+                <!-- Properties will be loaded by JavaScript -->
+                <div style="text-align: center; padding: 50px;">
+                    <i class="fas fa-spinner fa-spin" style="font-size: 3rem; color: var(--accent-yellow);"></i>
+                    <p>Загрузка объектов...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">Ваш Риэлтор</div>
+                    <p>Агентство недвижимости в Якутске с 2015 года. Профессиональное сопровождение сделок.</p>
+                    <a href="contacts.html" class="btn btn-secondary">Бесплатная консультация</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Категории</h4>
+                    <ul>
+                        <li><a href="catalog.html?filter=new">Новостройки</a></li>
+                        <li><a href="catalog.html?filter=secondary">Вторичное жилье</a></li>
+                        <li><a href="catalog.html?filter=house">Частные дома</a></li>
+                        <li><a href="catalog.html?filter=commercial">Коммерческая</a></li>
+                        <li><a href="catalog.html?filter=land">Земельные участки</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Компания</h4>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="calculator.html">Ипотека</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i><div>ул. Лермонтова, 38<br>Якутск, офис 8</div></li>
+                        <li><i class="fas fa-phone"></i><div>+7‒914‒298‒61‒62</div></li>
+                        <li><i class="fas fa-envelope"></i><div>vachrieltor@gmail.com</div></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2015-2026 Агентство недвижимости "Ваш Риэлтор". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Получение фильтра из URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const filterParam = urlParams.get('filter');
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            if (filterParam && filterParam !== 'all') {
+                // Активируем нужную кнопку фильтра
+                const filterBtn = document.querySelector(`.filter-btn[data-filter="${filterParam}"]`);
+                if (filterBtn) {
+                    setTimeout(() => filterBtn.click(), 100);
+                }
+            }
+        });
+    </script>
+    
+    <!-- Скрипт для темной темы -->
+    <script>
+    (function() {
+        // Проверяем сохраненную тему
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            const btn = document.getElementById('themeToggle');
+            if (btn) {
+                const icon = btn.querySelector('i');
+                if (icon) icon.className = 'fas fa-sun';
+            }
+        }
+        
+        function toggleTheme() {
+            const isDark = document.body.classList.toggle('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            const btn = document.getElementById('themeToggle');
+            if (btn) {
+                const icon = btn.querySelector('i');
+                if (icon) icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+            }
+        }
+        
+        // Навешиваем обработчик на кнопку
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+        });
+    })();
+    </script>
+</body>
+</html>
